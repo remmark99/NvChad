@@ -6,6 +6,6 @@ vim.opt.swapfile = false
 vim.opt.mouse = "a"
 vim.g.autosave = true
 vim.g.nvim_tree_show_icons = {
-  git = 0,
+  git = 1,
   folders = 0,
 }

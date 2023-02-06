@@ -21,7 +21,11 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
-  b.diagnostics.cppcheck,
+  b.diagnostics.cppcheck.with { args = { "--enable=warning,style,performance,portability", "--template=gcc", "--std=c11", "$FILENAME" }},
+  b.diagnostics.cpplint,
+
+  -- asm
+  b.formatting.asmfmt,
 }
 
 null_ls.setup {

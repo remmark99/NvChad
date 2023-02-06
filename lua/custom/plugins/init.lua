@@ -13,5 +13,9 @@ return {
       require "plugins.configs.lspconfig"
       require "custom.plugins.lspconfig"
     end,
-  }
+  },
+  ["iamcco/markdown-preview.nvim"] = {
+    ft = { "markdown" },
+    run = "cd app && npm install",
+  },
 }
