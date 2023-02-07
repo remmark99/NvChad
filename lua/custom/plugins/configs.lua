@@ -59,13 +59,24 @@ M.treesitter = function()
     highlight = {
       enable = true,
       additional_vim_regex_highlighting = true
-    }
+    },
+    autotag = {
+      enable = true
+    },
+    -- TODO(Vi) For some reason, not installing automatically
+    ensure_installed = {
+      "html",
+      "jsx",
+      "tsx",
+      "css"
+    },
+    auto_install = true,
   }
 end
 
 M.mason = {
   ["williamboman/mason.nvim"] = {
-    ensure_installed = { "lua-language-server", "cpp", "bash-language-server" },
+    ensure_installed = { "lua-language-server", "cpp", "bash-language-server", "deno", "emmet-ls" },
   }
 }
 

@@ -14,8 +14,13 @@ return {
       require "custom.plugins.lspconfig"
     end,
   },
+
   ["iamcco/markdown-preview.nvim"] = {
     ft = { "markdown" },
     run = "cd app && npm install",
+  },
+
+  ["windwp/nvim-ts-autotag"] = {
+    after = "nvim-treesitter",
   },
 }
