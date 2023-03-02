@@ -20,9 +20,9 @@ local sources = {
   b.diagnostics.shellcheck.with { diagnostics_format = "#{m} [#{c}]" },
 
   -- cpp
-  b.formatting.clang_format,
-  b.diagnostics.cppcheck.with { args = { "--enable=warning,style,performance,portability", "--template=gcc", "--std=c11", "$FILENAME" }},
-  b.diagnostics.cpplint,
+  b.formatting.clang_format.with { args = {"--style=Google", "$FILENAME"}},
+  b.diagnostics.cppcheck,
+  b.diagnostics.cpplint.with { args = {"--filter=-legal/copyright,-readability/casting", "--verbose=0", "$FILENAME"} },
 
   -- asm
   b.formatting.asmfmt,
