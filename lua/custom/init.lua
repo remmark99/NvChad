@@ -7,5 +7,5 @@ vim.opt.mouse = "a"
 vim.g.autosave = true
 vim.g.nvim_tree_show_icons = {
   git = 1,
-  folders = 0,
+  folders = 1,
 }

@@ -3,10 +3,34 @@ local M = {}
 M.nvimtree = {
   git = {
     enable = true,
+    ignore = true,
+    show_on_dirs = true,
+    show_on_open_dirs = true,
+    timeout = 400,
   },
   view = {
     side = "left",
     width = 20,
+  },
+  renderer = {
+    highlight_git = true,
+    icons = {
+      git_placement = "before",
+      show = {
+        git = true,
+      },
+      glyphs = {
+        git = {
+          unstaged = "✗",
+          staged = "✓",
+          unmerged = "",
+          renamed = "➜",
+          untracked = "★",
+          deleted = "",
+          ignored = "◌",
+        },
+      },
+    },
   },
 }
 
